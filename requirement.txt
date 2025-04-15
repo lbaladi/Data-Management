@@ -1,0 +1,15 @@
+pandas
+numpy
+requests
+sqlalchemy
+yfinance
+matplotlib
+scipy
+pandas-market-calendars
+plotly
+ta
+fredapi
+seaborn
+pytrends
+statsmodels
+fpdf
