@@ -32,6 +32,7 @@ La condition d'achat/vente est la suivante :
 - Si la volatilité sur 5 jours est supérieure à celle sur 10 jours ET si le rendement à 10 jours est négatif, vendre.
 - Si le RSI est inférieur à 30, acheter (surachat).
 - Si le RSI est supérieur à 80, vendre (survente).
+
 Cette stratégie n’a pas donné les résultats escomptés en termes de performance. Un ajustement des critères d'achat et de vente pourrait être nécessaire pour améliorer la rentabilité tout en minimisant le turnover des actifs.
 
 #### 3. Stratégie High Yield Equity Only :
@@ -41,6 +42,7 @@ La règle d'achat/vente appliquée est la suivante :
 - Si le rendement hebdomadaire dépasse un seuil (quantile 75%), acheter.
 - Si le rendement hebdomadaire est inférieur à un seuil (quantile 25%), vendre.
 - Sinon, ne rien faire.
+
 Cette stratégie a montré de bons résultats en termes de rendement, bien que la volatilité ait été plus élevée que celle des autres portefeuilles, ce qui était prévu, car aucune contrainte sur la volatilité n’a été imposée.
 
 ### Modélisation et Validation :
