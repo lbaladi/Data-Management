@@ -92,7 +92,7 @@ def compute_metrics_LR(data_df: pd.DataFrame, returns_df: pd.DataFrame, LR_asset
     # Ajouter la colonne Target avec conditions sur la volatilité et le rendement
     df_metrics["Target"] = 0  # Initialisation de la cible à 0 (ne rien faire)
     # Condition d'achat : volatilité faible et rendement positif
-    df_metrics.loc[(df_metrics["volat_next_week"] <= 0.15) & (df_metrics["Return_5j"] > 0), "Target"] = 1 ## on essaye 0.3 et 0.4 sinon on remet 0.2
+    df_metrics.loc[(df_metrics["volat_next_week"] <= 0.15) & (df_metrics["Return_5j"] > 0), "Target"] = 1
     # Condition de vente : volatilité élevée et rendement négatif
     df_metrics.loc[(df_metrics["volat_next_week"] > 0.15) & (df_metrics["Return_5j"] < 0), "Target"] = -1
 
