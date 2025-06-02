@@ -39,8 +39,8 @@ class Return(Base):
     id = Column(Integer, primary_key=True)
     product_id = Column(Integer, ForeignKey('products.id'))
     date = Column(Date, nullable=False)
-    return_value = Column(Float)  # Renommé pour éviter le mot-clé "return"
-
+    return_value = Column(Float)
+    
     product = relationship("Product", back_populates="returns")
 
 # Table Portfolios
@@ -48,13 +48,10 @@ class Portfolio(Base):
     __tablename__ = 'portfolios'
     id = Column(Integer, primary_key=True)
     date = Column(Date, nullable=False)  # Date de l'allocation
-
     client_id = Column(Integer, ForeignKey('clients.id'))  # ID du client
     product_id = Column(Integer, ForeignKey('products.id'))  # ID de l'actif
     weight = Column(Float, nullable=False)  # Poids de l'actif dans le portefeuille
     value = Column(Float, nullable=False)  # Valeur de l'actif dans le portefeuille
-
-    
     asset_price = Column(Float, nullable=True)  # Prix de l'actif
     qty = Column(Float, nullable=True)  # Quantité d'actifs détenue
     
